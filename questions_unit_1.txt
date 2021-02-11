@@ -1,0 +1,4 @@
+Q: What does the CPU stand for?
+A:central processing unit
+Q: Does the ALU perform math? True or False
+A: False
