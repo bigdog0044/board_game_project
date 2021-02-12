@@ -8,7 +8,7 @@ using namespace std;
 int unit1();
 
 //unit functions
-int randomquestion_unit1(int);
+int questions_unit1(int);
 int reading_questions_unit1();
 
 int main(){
@@ -22,46 +22,22 @@ int main(){
         cout << "You have chosen Unit 1. Good luck \n";
         unit1();
     }
-    
-    // switch (userinput)
-    // {
-    // case "1":
-    //     cout << "You have chosen Unit 1. Good luck \n";
-    //     main();
-    //     // runs function on Unit1.cpp
-    //     break;
-    // case "2":
-    //     cout << "You have chosen Unit 2. Good luck \n";
-    //     // runs function on Unit2.cpp
-    //     break;
-    // case "3":
-    //     cout << "You have chosen Unit 3. Good luck \n";
-    //     // runs function on Unit3.cpp
-    //     break;
-    // case "4":
-    //     cout << "You have chosen Unit 4. Good luck \n";
-    //     // runs function on Unit4.cpp
-    //     break;
-    // default:
-    //     cout << "ERROR: Please try a number within range of 1-4 \n";
-    //     main();
-    //     break;
 }
 
 
 // qnum = Question number
 // question = question to ask user
 
-int unit1(){
-    int qnum;
-    int number = (rand() % 10);
-    randomquestion_unit1(qnum = number);
-    cout << "test";
-    return 0;   
-}
+// int unit1(){
+//     int qnum;
+//     int number = (rand() % 10);
+//     randomquestion_unit1(qnum = number);
+//     cout << "test";
+//     return 0;   
+// }
 
 
-int randomquestion_unit1(int qnum){
+int questions_unit1(int qnum){
     /* when reading the text file, the letters before the question stand for the following:
     Q - question
     A - Answer
@@ -69,19 +45,23 @@ int randomquestion_unit1(int qnum){
    
 
    // Reads the question and answer
-   string line;
-   char letter;
-   line = qnum;
+   for (int i = 0; i < 10; i++){
+       //Q1
+       string Q1ans;
+       cout << "What does the ALU stand for?";
+       cin >> Q1ans;
+       if(Q1ans != "Athimritic Logic Unit" or "athimritic logic unit"){
+           cout << "Incorrect, the correct answer was Athimritic Logic Unit";
+       }
 
-   ifstream reader("questions_unit_1.txt");
-   reader.eof();
-   if(reader.get(letter)){
-
+       //Q2
+       string Q2ans;
+       cout << "What does the CPU stand for?";
+       cin >> Q1ans;
+       if(Q1ans != "Athimritic Logic Unit" or "athimritic logic unit"){
+           cout << "Incorrect, the correct answer was Athimritic Logic Unit";
+       }
    }
-    getline(reader, line);
-    cout << line + "\n";
-    string userans;
-    cin >> userans;
 
 
    return 0;
