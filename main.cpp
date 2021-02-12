@@ -8,7 +8,7 @@ using namespace std;
 int unit1();
 
 //unit functions
-int questions_unit1(int);
+string questions_unit1();
 int reading_questions_unit1();
 
 int main(){
@@ -20,7 +20,7 @@ int main(){
     if (userinput == "1")
     {
         cout << "You have chosen Unit 1. Good luck \n";
-        unit1();
+        questions_unit1();
     }
 }
 
@@ -37,32 +37,30 @@ int main(){
 // }
 
 
-int questions_unit1(int qnum){
+string questions_unit1(/*int qnum*/){
     /* when reading the text file, the letters before the question stand for the following:
     Q - question
     A - Answer
     */
-   
+    int total_questions = 10;
+    int wrong_questions = 0;
+
 
    // Reads the question and answer
-   for (int i = 0; i < 10; i++){
-       //Q1
-       string Q1ans;
-       cout << "What does the ALU stand for?";
-       cin >> Q1ans;
-       if(Q1ans != "Athimritic Logic Unit" or "athimritic logic unit"){
-           cout << "Incorrect, the correct answer was Athimritic Logic Unit";
-       }
+    //Q1
+    string Q1ans;
+    cout << "What does the ALU stand for?";
+    cin >> Q1ans;
+    if(Q1ans != "Athimritic Logic Unit" || "athimritic logic unit"){
+        cout << "Incorrect, the correct answer was Athimritic Logic Unit \n";
+    }
 
-       //Q2
-       string Q2ans;
-       cout << "What does the CPU stand for?";
-       cin >> Q1ans;
-       if(Q1ans != "Athimritic Logic Unit" or "athimritic logic unit"){
-           cout << "Incorrect, the correct answer was Athimritic Logic Unit";
-       }
-   }
-
-
+    //Q2
+    string Q2ans;
+    cout << "What does the CPU stand for?";
+    cin >> Q1ans;
+    if(Q1ans != "Central Processing Unit" || "central processing unit"){
+        cout << "Incorrect, the correct answer was Athimritic Logic Unit \n";
+    }
    return 0;
 }
